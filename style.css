@@ -1,0 +1,82 @@
+body{
+    text-align: center;
+}
+@keyframes rotateWheel{
+    form{
+        transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+}
+#LeftWheel{
+    animation: rotateWheel 2s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#RightWheel{
+    animation: rotateWheel 2s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+@keyframes bounce{
+    form{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+
+    }
+}
+#biker,#hat{
+    animation: bounce 1s ease infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes wind {
+    form{
+        transform: rotateX(0deg) skewX(0deg);
+
+    }
+    to{
+        transform: rotateX(-20deg) skewX(-6deg);
+    }
+    
+}
+#Leaves{
+    animation: wind 2s linear infinite alternate;
+    transform-origin: bottom ;
+}
+#Hair{
+    animation: wind 2s linear infinite alternate-reverse ;
+    transform-origin: top;
+}
+@keyframes fly{
+    from{
+        transform: rotate(0deg) skewX(0deg) translateX(0px);
+    }
+    to{
+        transform: rotate(360deg) skewX(360deg) translateX(-5px);
+    }
+}
+#Aerop{
+    animation: fly 10s ease infinite ;
+    transform-origin: bottom;   
+}
+
+@keyframes wind2 {
+    form{
+        transform: rotateX(0deg) skewX(0deg);
+
+    }
+    to{
+        transform: rotateX(-15deg) skewX(-2deg);
+    }
+    
+}
+#skirt{
+    animation: wind2 2s linear infinite alternate-reverse;
+    transform-origin: right;
+}
